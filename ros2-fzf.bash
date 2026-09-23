@@ -300,7 +300,7 @@ rlaunch() {
     local sel pkg file
     sel=$(_r2f_pkg_dirs | while IFS=$'\t' read -r pkg dir; do
             [ -d "$dir/launch" ] || continue
-            find "$dir/launch" -maxdepth 2 -type f -name '*launch*' \
+            find -L "$dir/launch" -maxdepth 2 -type f -name '*launch*' \
                 \( -name '*.py' -o -name '*.xml' -o -name '*.yaml' -o -name '*.yml' \) \
                 -printf "$pkg %f\t%p\n" 2>/dev/null
         done | _r2f_pick 'launch' "$(_r2f_hl python) {2}" \
