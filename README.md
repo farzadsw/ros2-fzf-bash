@@ -4,6 +4,8 @@ Fuzzy-find your way around ROS 2 from **bash**. Pick topics, nodes, services, ac
 
 This is the bash sibling of [oh-my-zsh-ros2-plugin](https://github.com/farzadsw/oh-my-zsh-ros2-plugin).
 
+![demo](fzf-demo.webp)
+
 ## Install
 
 ```bash
